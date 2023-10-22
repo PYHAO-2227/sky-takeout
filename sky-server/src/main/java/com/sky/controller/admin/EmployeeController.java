@@ -80,6 +80,8 @@ public class EmployeeController {
     /*
     * new employee
     */
+    @PostMapping
+    @ApiOperation("add employee")
     public Result save(@RequestBody EmployeeDTO employeeDTO) {
         log.info("add new employee : {}", employeeDTO);
         employeeService.save(employeeDTO);
