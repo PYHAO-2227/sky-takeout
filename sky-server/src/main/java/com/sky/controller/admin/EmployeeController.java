@@ -83,6 +83,6 @@ public class EmployeeController {
     public Result save(@RequestBody EmployeeDTO employeeDTO) {
         log.info("add new employee : {}", employeeDTO);
         employeeService.save(employeeDTO);
-        return null;
+        return Result.success();
     }
 }
